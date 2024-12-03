@@ -22,3 +22,20 @@ function escopoLocal() {
 }
 escopoLocal();
 // console.log(local); // Erro: 'local' é inacessível fora da função
+
+// Usando const
+const nome = "Alan";
+console.log(nome); // Output: Alan
+// nome = "João"; // Isso causaria um erro porque 'const' não permite reatribuição
+
+// Usando let
+let idade = 25;
+console.log(idade); // Output: 25
+idade = 26; // Reatribuição é permitida com 'let'
+console.log(idade); // Output: 26
+
+// Usando var
+var cidade = "Sombrio";
+console.log(cidade); // Output: Sombrio
+cidade = "Florianópolis"; // Reatribuição é permitida com 'var'
+console.log(cidade); // Output: Florianópolis
