@@ -22,3 +22,10 @@ function escopoLocal() {
 }
 escopoLocal();
 // console.log(local); // Erro: 'local' é inacessível fora da função
+
+function teste() {
+    let local = "Testando123";
+    console.log(local);
+}
+teste();
+
