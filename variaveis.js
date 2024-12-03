@@ -9,16 +9,25 @@ if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
 }
-// console.log(exemploLet); // Erro: exemploLet não está definido.
+//console.log(exemploLet); // Erro: exemploLet não está definido.
 
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
 console.log(PI); // 3.14
-// PI = 3.15; // Erro: Não é permitido alterar uma const
+//PI = 3.15; // Erro: Não é permitido alterar uma const
 
 function escopoLocal() {
     let local = "Escopo de função";
     console.log(local);
 }
 escopoLocal();
-// console.log(local); // Erro: 'local' é inacessível fora da função
+//console.log(local); // Erro: 'local' é inacessível fora da função
+console.log("Enfim: ");
+if (true) {
+    let amemLet = "Amém Jesus!";
+    console.log(amemLet);
+}
+
+console.log("Número da sorte: ");
+const fe = 777;
+    console.log(fe);
