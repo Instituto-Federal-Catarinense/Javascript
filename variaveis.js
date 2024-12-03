@@ -22,3 +22,17 @@ function escopoLocal() {
 }
 escopoLocal();
 // console.log(local); // Erro: 'local' é inacessível fora da função
+
+console.log("---let---")
+if(true){
+    let isso="isso deu certo";
+    console.log(isso);
+}
+
+console.log("---const---")
+if(true){
+    let isso="isso tambem deu certo"
+    console.log(isso)
+    isso="isso nao da certo"
+    console.log(isso)
+}
