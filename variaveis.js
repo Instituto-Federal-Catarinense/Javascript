@@ -14,7 +14,7 @@ if (true) {
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
 console.log(PI); // 3.14
-// PI = 3.15; // Erro: Não é permitido alterar uma const
+//PI = 3.15; // Essa parte não deveria existir, ou caso fosse necessario não utilizar const na linha 15 para declarar essa variavel
 
 function escopoLocal() {
     let local = "Escopo de função";
