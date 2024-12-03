@@ -23,9 +23,17 @@ function escopoLocal() {
 escopoLocal();
 // console.log(local); // Erro: 'local' é inacessível fora da função
 
+// brincando na aula 
+
 function teste() {
     let local = "Testando123";
     console.log(local);
 }
 teste();
+//af
+
+console.log("teste2");
+const teste = 9090;
+console.log(teste2);
+//teste2= 377373;
 
