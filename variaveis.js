@@ -1,28 +1,29 @@
-// ---- var ----
 console.log("---- var ----");
 if (true) {
-    var exemploVar = "Visível fora do bloco!";  // 'var' não tem escopo de bloco
+    var exemploVar = "Visível fora do bloco!";
 }
-console.log(exemploVar); // Funciona, mas pode causar problemas porque 'var' não respeita o escopo de bloco.
+console.log(exemploVar); // Funciona, mas pode causar problemas.
 
-// ---- let ----
 console.log("---- let ----");
 if (true) {
-    let exemploLet = "Visível apenas dentro do bloco!";  // 'let' tem escopo de bloco
-    console.log(exemploLet); // Funciona aqui, pois está dentro do bloco
+    let exemploLet = "Visível apenas dentro do bloco!";
+    console.log(exemploLet); // Funciona aqui.
 }
-// console.log(exemploLet); // Erro: exemploLet não está definido fora do bloco
+console.log("Tentando acessar exemploLet fora do bloco:");
+try {
+    console.log(exemploLet); // Erro: exemploLet não está definido
+} catch (error) {
+    console.log(error.message); // Exibe o erro de forma controlada
+}
 
-// ---- const ----
 console.log("---- const ----");
-const PI = 3.14; // Constantes não podem ser reatribuídas
+const PI = 3.14; // Valor que não muda
 console.log(PI); // 3.14
-// PI = 3.15; // Erro: Não é permitido alterar uma constante
+// PI = 3.15; // Erro: Não é permitido alterar uma const
 
-// Função com escopo local
 function escopoLocal() {
-    let local = "Escopo de função";  // 'local' tem escopo de função
-    console.log(local); // Funciona dentro da função
+    let local = "Escopo de função";
+    console.log(local);
 }
-escopoLocal(); // Chama a função
+escopoLocal();
 // console.log(local); // Erro: 'local' é inacessível fora da função
