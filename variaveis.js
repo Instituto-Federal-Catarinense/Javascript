@@ -9,7 +9,12 @@ if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
 }
-// console.log(exemploLet); // Erro: exemploLet não está definido.
+console.log("Tentando acessar exemploLet fora do bloco:");
+try {
+    console.log(exemploLet); // Erro: exemploLet não está definido
+} catch (error) {
+    console.log(error.message); // Exibe o erro de forma controlada
+}
 
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
