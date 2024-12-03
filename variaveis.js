@@ -8,8 +8,15 @@ console.log("---- let ----");
 if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
-}
+
 // console.log(exemploLet); // Erro: exemploLet não está definido.
+
+let idade = 25;
+idade = 26;
+
+const nome = "Maria";
+
+console.log(`Nome: ${nome}, Idade: ${idade}`);
 
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
