@@ -22,3 +22,11 @@ function escopoLocal() {
 }
 escopoLocal();
 // console.log(local); // Erro: 'local' é inacessível fora da função
+function Renato() {
+    let renatinho = "Jota";
+    console.log(renatinho);
+}
+Renato();
+
+let exemploVar = "Nova variável"; // Erro: variável "exemploVar" já foi declarada
+console.log(exemploVar)
