@@ -1,7 +1,12 @@
+var nome = "Arthur";
+console.log(nome);
+
 console.log("---- var ----");
 if (true) {
     var exemploVar = "Visível fora do bloco!";
+    var nome = "Melo";
 }
+console.log(nome);
 console.log(exemploVar); // Funciona, mas pode causar problemas.
 
 console.log("---- let ----");
@@ -9,7 +14,7 @@ if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
 }
-// console.log(exemploLet); // Erro: exemploLet não está definido.
+//console.log(exemploLet); // Erro: exemploLet não está definido.
 
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
