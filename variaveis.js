@@ -3,13 +3,13 @@ console.log(nome);
 
 console.log("---- var ----");
 if (true) {
-    var exemploVar = "Visível fora do bloco!";
-    var nome = "Melo";
+    let nome = "Melo"   //var exemploVar = "Visível fora do bloco!";
+    console.log("Acessível dontro do bloco: " + nome)    //var nome = "Melo";
 }
 console.log(nome);
-console.log(exemploVar); // Funciona, mas pode causar problemas.
+// console.log(exemploVar); // Funciona, mas pode causar problemas.
 
-console.log("---- let ----");
+console.log("Acessível fora do bloco: " + nome);
 if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
