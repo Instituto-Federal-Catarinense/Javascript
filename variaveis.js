@@ -1,5 +1,9 @@
+var nome ="Gabriel";
+console.log(nome);
+
 console.log("---- var ----");
 if (true) {
+    console.log("Acessivel dentro do bloco: " + nome);
     var exemploVar = "Visível fora do bloco!";
 }
 console.log(exemploVar); // Funciona, mas pode causar problemas.
@@ -13,11 +17,15 @@ escopoFuncao();
 // console.log(variavelFuncao); // Erro: 'variavelFuncao' não está acessível fora da função.
 
 console.log("---- let ----");
+let sobrenome = "Trajano"; //funciona aqui
 if (true) {
+    console.log(sobrenome);
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
 }
 // console.log(exemploLet); // Erro: exemploLet não está definido.
+
+console.log("Acessivel Globalmente "+sobrenome);
 
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
