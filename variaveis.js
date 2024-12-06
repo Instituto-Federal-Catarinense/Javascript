@@ -1,12 +1,16 @@
+var nome ="AA";
+console.log(nome)
+
 console.log("---- var ----");
 if (true) {
+    console.log("Acessível dentro do bloco: " + nome);
     var exemploVar = "Visível fora do bloco!";
 }
 console.log(exemploVar); // Funciona, mas pode causar problemas.
 
 console.log("---- let ----");
 if (true) {
-    let exemploLet = "Visível apenas dentro do bloco!";
+    let exemploLet = "Visível apenas dentro do bloco: ";
     console.log(exemploLet); // Funciona aqui.
 }
 console.log(exemploLet); // Erro: exemploLet não está definido.
