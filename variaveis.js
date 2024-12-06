@@ -1,8 +1,21 @@
+let nome = "Diego";
+console.log(nome);
+
 console.log("---- var ----");
 if (true) {
-    var exemploVar = "Visível fora do bloco!";
+    let nome = "KIKO";
+    console.log ("Acessível dentro do bloco: " + nome)
 }
-console.log(exemploVar); // Funciona, mas pode causar problemas.
+console.log("Acessível fora do bloco: " + nome);
+
+
+
+//PERSONALIZADO POR DIEGO ONGARATTO
+
+
+
+
+
 
 console.log("---- let ----");
 if (true) {
