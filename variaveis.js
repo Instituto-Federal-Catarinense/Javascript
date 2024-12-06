@@ -1,14 +1,25 @@
-var nome = "receba"
-console.log (nome);
+//var nome = "receba"
+//console.log (nome);
 
-console.log("---- var ----");
-if (true) {
-    var nome = "devolva";
-    console.log(nome);
-    var exemploVar = "Visível fora do bloco!";
-}
-console.log(exemploVar); // Funciona, mas pode causar problemas.
+//console.log("---- var ----");
+//if (true) {
+    //var nome = "devolva";
+    //console.log(nome);
+    //var exemploVar = "Visível fora do bloco!";}//
+
+let nome = "Shrek";
 console.log(nome);
+    
+console.log("----var----");
+if (true) {
+  let nome = "joao";
+  console.log("Acessível dentro do bloco: " + nome);
+}
+console.log("Acessivel fora do bloco:" + nome);
+
+//console.log(exemploVar); // Funciona, mas pode causar problemas.
+console.log(nome);
+
 console.log("---- let ----");
 if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
