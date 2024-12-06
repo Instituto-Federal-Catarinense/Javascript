@@ -1,9 +1,9 @@
-let nome = "Biny";
+let nome = "bezlindao";
 console.log(nome);
 
 console.log("---- var ----");
 if (true) {
-    let nome = " Binyamin";
+    let nome = " bezao lindo";
     console.log("Acessível dentro do bloco: " + nome);
 }
 console.log(nome); 
