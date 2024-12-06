@@ -1,3 +1,23 @@
+var nome = "João";
+console.log(nome);
+
+
+console.log("---- var ----");
+if (true) {
+    console.log("Acessivel dentro do bloco: " + nome);
+    var exemploVar = "Visível fora do bloco!";
+}
+console.log(exemploVar); // Funciona, mas pode causar problemas.
+
+console.log("---- let ----");
+let sobrenome = "Bonotto";
+if (true) {
+    console.log(sobrenome);
+    let exemploLet = "Visível apenas dentro do bloco!";
+    console.log(exemploLet); // Funciona aqui.
+}
+console.log("Acessivel globalmente: " + sobrenome)
+
 console.log("---- var ----");
 if (true) {
     var exemploVar = "Visível fora do bloco!";
@@ -8,8 +28,15 @@ console.log("---- let ----");
 if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet); // Funciona aqui.
-}
+
 // console.log(exemploLet); // Erro: exemploLet não está definido.
+
+let idade = 25;
+idade = 26;
+
+const nome = "Maria";
+
+console.log(`Nome: ${nome}, Idade: ${idade}`);
 
 console.log("---- const ----");
 const PI = 3.14; // Valor que não muda
