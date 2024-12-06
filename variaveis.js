@@ -1,13 +1,14 @@
-var nome = "Pietro";
+let nome = "Pietro";
 console.log(nome);
 
 console.log("---- var ----");
-if (true) {
-    var nome = "Chaves";
-    console.log(nome);
-    var exemploVar = "Visível fora do bloco!";
+if (true) { 
+    let nome = "Chiquinha";
+    console.log("Acessível dentro do bloco: " + nome);
+    //var exemploVar = "Visível fora do bloco!";
 }
-console.log(exemploVar); // Funciona, mas pode causar problemas.
+    console.log("Acessível fora do bloco: " + nome);
+//console.log(exemploVar); // Funciona, mas pode causar problemas.
 console.log(nome);
 console.log("---- let ----");
 if (true) {
@@ -26,4 +27,4 @@ function escopoLocal() {
     console.log(local);
 }
 escopoLocal();
-//console.log(local); // Erro: 'local' é inacessível fora da função
+//console.log(local); // Erro: 'local' é inacessível fora da função 
