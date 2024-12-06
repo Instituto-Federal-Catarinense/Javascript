@@ -1,5 +1,9 @@
+var nome = "guilherme";
+console.log(nome);
 console.log("---- var ----");
 if (true) {
+    console.log("sou o " + nome);
+
     var exemploVar = "Agora foram diminuidas as chances de erro drasticamente";
     console.log(exemploVar); //assim pode funcionar mas não é recomendado usar mais o var
 }
@@ -10,7 +14,6 @@ if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet);
 }
-let exemploLet = "Agora esse let existe"
 console.log(exemploLet);
 
 console.log("---- const ----");
