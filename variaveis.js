@@ -1,3 +1,23 @@
+var nome = "Lucas";
+console.log(nome);
+
+
+console.log("---- var ----");
+if (true) {
+    console.log("Acessivel dentro do bloco: " + nome);
+    var exemploVar = "Visível fora do bloco!";
+}
+console.log(exemploVar); // Funciona, mas pode causar problemas.
+
+console.log("---- let ----");
+let sobrenome = "Hertzog";
+if (true) {
+    console.log(sobrenome);
+    let exemploLet = "Visível apenas dentro do bloco!";
+    console.log(exemploLet); // Funciona aqui.
+}
+console.log("Acessivel globalmente: " + sobrenome)
+
 console.log("---- var ----");
 if (true) {
     var exemploVar = "Visível fora do bloco!";
