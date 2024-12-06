@@ -1,5 +1,9 @@
+var nome = "ana";
+console.log(nome);
+
 console.log("---- var ----");
 if (true) {
+    console.log("Acessível dentro do bloco"+ nome);
     var exemploVar = "Visível fora do bloco!";
 }
 console.log(exemploVar); 
