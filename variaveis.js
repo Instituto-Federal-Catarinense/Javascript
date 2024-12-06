@@ -45,4 +45,4 @@ console.log(sobrenome + " <-- local que é acessado localmente");
 console.log(sobrenome + " local que não é acessado globalmente")
 
 const sou_constante = "constante"
-const sou_constante = "não mudei :("
+//const sou_constante = "não mudei :("
