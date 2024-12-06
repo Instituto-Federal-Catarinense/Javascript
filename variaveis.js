@@ -1,5 +1,3 @@
-var nome = "guilherme";
-console.log(nome);
 console.log("---- var ----");
 if (true) {
     console.log("sou o " + nome);
@@ -11,6 +9,8 @@ if (true) {
 
 console.log("---- let ----");
 if (true) {
+console.log(sobrenome);
+
     let exemploLet = "Visível apenas dentro do bloco!";
     console.log(exemploLet);
 }
@@ -29,3 +29,20 @@ function escopoLocal() {
 let local = "local2.0"
 escopoLocal();
     console.log(local); //agora ele está puxando uma variavel global, evitando que ocorra o erro anterior
+
+
+
+
+
+let nome = "guilherme";
+
+console.log(nome + " <-- global que é acessado globalmente");
+if (true) {
+    console.log(nome + " <-- global que é acessado localmente");
+let sobrenome = "ribeiro";
+console.log(sobrenome + " <-- local que é acessado localmente");
+}
+console.log(sobrenome + " local que não é acessado globalmente")
+
+const sou_constante = "constante"
+const sou_constante = "não mudei :("
