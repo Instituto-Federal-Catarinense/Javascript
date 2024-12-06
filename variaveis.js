@@ -1,3 +1,13 @@
+let nome = "jão";
+console.log(nome);
+
+console.log("----var----");
+if (true) {
+    let nome = "jão";
+    console.log("acessivel dentro do bloco:" + nome);
+}
+console.log("acessivel dentro do bloco:" + nome);
+
 var nome = "Ricardo Millos";
 console.log(nome);
 console.log("---- var ----");
