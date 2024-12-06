@@ -1,14 +1,14 @@
-var nome = "Gi";
+let nome = "Gi";
 console.log(nome);
 
 console.log("---- var ----");
 if (true) {
-    var nome = "Nana";
-    console.log(nome);
-    var exemploVar = "Visível fora do bloco!";
+    let nome = "Nana";
+    console.log("Acessível fentro do bloco " + nome);
+//var exemploVar = "Visível fora do bloco!";
 }
-console.log(exemploVar); // Funciona, mas pode causar problemas.
-console.log(nome);
+//console.log(exemploVar); // Funciona, mas pode causar problemas.
+console.log("Acessível fora do bloco " + nome);
 console.log("---- let ----");
 if (true) {
     let exemploLet = "Visível apenas dentro do bloco!";
