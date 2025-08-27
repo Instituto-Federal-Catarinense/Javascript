@@ -1,4 +1,4 @@
-var nome = "Joédio";
+var nome = "Évelyn";
 console.log(nome);
 
 console.log("---- var ----");
@@ -9,7 +9,7 @@ if (true) {
 console.log(exemploVar); // Funciona, mas pode causar problemas.
 
 console.log("---- let ----");
-let sobrenome = "Borges";
+let sobrenome = "Teixeira";
 if (true) {
     console.log(sobrenome); //  funciona aqui.
     let exemploLet = "Visível apenas dentro do bloco!";
