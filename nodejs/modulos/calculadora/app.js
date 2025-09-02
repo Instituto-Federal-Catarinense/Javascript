@@ -1,10 +1,6 @@
-const funcoesMatematicas = require('./funcoes_matematicas');
-const calcularIdade = require('./calculaIdade');;
+const funcoes = require('./funcoes_matematicas');
 
-// Exemplo de uso:
-console.log('Soma:', funcoesMatematicas.somar(2, 3));
-console.log('Subtração:', funcoesMatematicas.subtrair(5, 2));
-console.log('Multiplicação:', funcoesMatematicas.multiplicar(4, 3));
-console.log('Divisão:', funcoesMatematicas.dividir(10, 2));
-
-console.log('Idade:', calcularIdade.calculaIdade(1990, 2024));
+console.log('Soma: 2 + 3 =', funcoes.soma(2, 3));
+console.log('Subtração: 5 - 2 =', funcoes.subtrai(5, 2));
+console.log('Multiplicação: 4 * 3 =', funcoes.multiplica(4, 3));
+console.log('Divisão: 10 / 2 =', funcoes.divide(10, 2));
