@@ -17,9 +17,6 @@ function dividir(a, b) {
     return a / b;
 }
 
-const nascimento = 2008;
-const ano = 2025;
-
 module.exports = {
     somar,
     subtrair,
