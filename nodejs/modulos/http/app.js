@@ -1,5 +1,5 @@
-const http = require('http');
-http.createServer((req,res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('ABSDNKLAFYDHIASOF ');
-}).listen(1236);
+const http = require('http'); // importa o módulo HTTP
+http.createServer((req,res) => { // cria um servidor
+    res.writeHead(200, {'Content-Type': 'text/plain'}); // cabeçalho da resposta
+    res.end('ABSDNKLAFYDHIASOF '); // corpo da resposta
+}).listen(1236); // o servidor escuta a porta 1236
