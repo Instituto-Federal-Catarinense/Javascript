@@ -6,5 +6,5 @@ http.createServer((req,res) => {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     // Envia a resposta para o cliente e finaliza a conexão
     res.end('ABSDNKLAFYDHIASOF');
-// Faz o servidor escutar na porta 1236
-}).listen(1236);
+// Faz o servidor escutar na porta 8080
+}).listen(8080);
