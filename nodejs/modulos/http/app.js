@@ -9,3 +9,4 @@ http.createServer((req, res) => {
     res.end('Hello World\n');
     // Inicia o servidor na porta 3000
 }).listen(3000);
+console.log('Servidor rodando em http://localhost:3000/');
