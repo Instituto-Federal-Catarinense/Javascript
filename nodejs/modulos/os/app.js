@@ -7,9 +7,6 @@ console.log('Arquitetura do sistema:', os.arch());
 // Exibe a quantidade total de memória RAM disponível no computador (em bytes)
 console.log('Memória total (bytes):', os.totalmem());
 
-// Mostra a quantidade de CPUs (núcleos) disponíveis no sistema
-console.log('Quantidade de CPUs:', os.cpus().length);
-
 // Exibe a quantidade de memória RAM livre no momento (em bytes)
 console.log('Memória livre (bytes):', os.freemem());
 
