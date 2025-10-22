@@ -1,8 +1,8 @@
-const router = express.router();
-const siteController = require('../controllers/siteController');
-const {route} = require('./users');
+const express = require("express");
+const router = express.Router();
+const produtosController = require('../controllers/produtosController');
 
-router.get("/",siteController.produtos);
-router.get("/camisetas",siteController.camisetas);
+router.get("/",produtosController.produtos);
+router.get("/camisetas",produtosController.camisetas);
 
 module.exports = router;

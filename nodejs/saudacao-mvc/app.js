@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 const port = 3000;
 
@@ -16,6 +15,14 @@ app.use('/', indexRoutes);
 const usersRoutes = require('./routes/users');
 app.use('/users', usersRoutes);
 
+const produtosRoutes = require('./routes/produtos');
+app.use('/produtos', produtosRoutes);
+
+const clientesRoutes = require('./routes/clientes');
+app.use('/clientes', clientesRoutes);
+
+
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
