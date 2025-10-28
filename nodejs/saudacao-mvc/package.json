@@ -11,6 +11,13 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
-  }
+    "morgan": "~1.9.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "description": "Projeto exemplo utilizando `express-generator`, padrão MVC, EJS como view engine e formulário para saudação com faixa etária.",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

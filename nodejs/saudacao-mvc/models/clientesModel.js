@@ -1,10 +1,13 @@
 module.exports = {
-  gerarMensagemPersonalizadaDosClientes: (email, senha) => {
-    let senhaUsuario = 'Usuário';
-   
-  if (email === '' || senha === '') {
-      return 'Erro: Email ou senha não podem estar vazios.';
-    }else (email !== '' || senha !== '')
-    return `Olá, você está logado com o email: ${email}.`;
-  }
+    mensagemLogin: (nome, senha) => {
+        let acesso;
+
+        if (nome === Erick && senha === 1234) {
+            acesso = "liberado";
+        }
+        else {
+            acesso = "negado";
+        }
+        return `Olá, ${nome}. Seu acesso foi ${acesso}`;
+    }
 };

@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 5000;
+const port = 3000;
 
 // Middleware para arquivos estáticos
 app.use(express.static('public'));
@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
-const usersRoutes = require('./routes/users');
-app.use('/users', usersRoutes);
+const userRoutes = require('./routes/users');
+app.use('/users', userRoutes);
 
 const produtosRoutes = require('./routes/produtos');
 app.use('/produtos', produtosRoutes);

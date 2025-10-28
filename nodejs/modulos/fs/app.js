@@ -1,19 +1,18 @@
-// Cria uma constante "fs" que impota o módulo nativo "fs" do Node.js
-const fs = require('fs');
+// importando o módulo fs (file system)
+//const fs = require('fs');
 
-// Lê o conteúdo do arquivo "example.txt" de forma assíncrona
-fs.readFile('example.txt', 'utf8', (err, data) => {
-    // Se err existir, mostra o erro
-    // Se não, mostra o conteúdo do arquivo
-    
+import fs from 'fs';
 
-    //Caso dê um erro na leitura do arquivo exibe o erro no console
+// lendo um arquivo de forma assíncrona
+fs.readFile('example.txt', 'utf8', (err, data) => { // callback
+    // tratando erros
     if (err) {
         console.error('Erro ao ler o arquivo:', err);
         return;
     }
+    // exibindo o conteúdo do arquivo no console
     console.log('Conteúdo do arquivo:', data);
-});
+}); 
 
-// Esta mensagem é exibida antes da leitura do arquivo, demonstrando a natureza assíncrona do Node.js
+// mensagem que será exibida antes da leitura do arquivo
 console.log('Esta mensagem aparece primeiro.');
