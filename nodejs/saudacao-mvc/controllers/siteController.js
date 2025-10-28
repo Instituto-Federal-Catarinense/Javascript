@@ -1,4 +1,3 @@
-const { use } = require('react');
 const saudacaoModel = require('../models/saudacaoModel');
 
 module.exports = {
