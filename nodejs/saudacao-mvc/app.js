@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Middleware para arquivos estáticos
 app.use(express.static('public'));
@@ -13,19 +13,24 @@ app.use(express.urlencoded({ extended: true }));
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
-//Users Route
-const usersRoutes = require('./routes/users');
+//user rotes
+const usersRoutes = require('./routes/users');  
 app.use('/users', usersRoutes);
 
-// Produtos Route
-const produtosRoutes = require('./routes/produtos');
-app.use('/produtos', produtosRoutes);
+  //produstos routes
+  const produtosRoutes = require('./routes/produtos');
+  app.use('/produtos', produtosRoutes);
 
-//Clientes Route
-const clientesRoutes = require('./routes/clientes');
-app.use('/clientes', clientesRoutes);
+  //clientes routes
+  const clientesRoutes = require('./routes/clientes');
+  app.use('/clientes', clientesRoutes);
+
+  //vini rotas
+  const viniRoutes = require('./routes/vini');
+  app.use('/vini', viniRoutes);
 
 // Servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
+
 });

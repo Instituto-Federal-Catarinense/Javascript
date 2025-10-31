@@ -1,8 +1,12 @@
-//const http = require('http');// Importa o módulo HTTP
-import http from 'http';// Importa o módulo HTTP
-// Cria um servidor HTTP que responde com "Hello World!" para todas as requisições
-http.createServer((req, res) => {// Função de callback que lida com as requisições
-  res.writeHead(200, {'Content-Type': 'text/plain'});// Define o cabeçalho da resposta com status 200 e tipo de conteúdo texto simples
-  res.end('Hello World!');// Envia a resposta "Hello World!" e finaliza a resposta
-}).listen(8080);// O servidor escuta na porta 8080
-console.log('Servidor rodando em http://localhost:8080/');// Loga uma mensagem indicando que o servidor está rodando
+// Importa o módulo 'http' para criar um servidor web
+const http = require('http');
+
+// Cria um servidor HTTP
+http.createServer((req, res) => {
+    // Define o status da resposta como 200 (OK) e o tipo de conteúdo como texto simples
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    // Envia a resposta 'Hello World' para o cliente e finaliza a conexão
+    res.end('Hello World\n');
+// O servidor escuta na porta 8080
+}).listen(8080);
+

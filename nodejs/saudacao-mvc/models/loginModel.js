@@ -1,10 +1,13 @@
+const { verificado } = require("../controllers/clientesController")
+
 module.exports = {
-    autenticarUsuario: (email, senha) => {
-        if (email === 'adm@gmail.com' && senha === '123') {
-             acesso = "liberado";
-        } else {
-             acesso = "negado";
+    autenticar: (usuario, senha) => {
+        let acesso;
+        // ...autenticação de exemplo...
+        if (usuario === 'admin' && senha === '123') {
+            acesso = "liberado";
+        }else {
+            acesso
         }
-        return `Olá ${email}, seu acesso foi ${acesso}!`;
-    }
-};
+        return "Ola, ${usuario}, seu acesso foi ${acesso}"
+}};

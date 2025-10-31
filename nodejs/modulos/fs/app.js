@@ -1,12 +1,18 @@
-//const fs = require('fs');// Importa o módulo de sistema de arquivos
-import fs from 'fs'; // Importa o módulo de sistema de arquivos (usando sintaxe ES6)
-// Lê o conteúdo de um arquivo de forma assíncrona
-fs.readFile('example.txt', 'utf8', (err, data) => { // Lê o arquivo 'example.txt' de forma assíncrona usando codificação UTF-8
-    if (err) { // Se ocorrer um erro durante a leitura
-        console.error('Erro ao ler arquivo:', err); // Exibe o erro no console
-        return; // Encerra a função em caso de erro
-    }
-    console.log('Conteúdo do arquivo:', data); // Exibe o conteúdo do arquivo no console
+// Importa o módulo 'fs' (file system) para manipulação de arquivos
+//const fs = require('fs');
+
+
+import fs from 'fs';
+// Lê o arquivo 'exemplo.txt' de forma assíncrona
+fs.readFile('exemplo.txt', 'utf8', (err, data) => {
+  // Se ocorrer um erro na leitura, exibe a mensagem de erro
+  if (err) {
+    console.error('erro ao ler o arquivo', err);
+    return; // Encerra a função caso haja erro
+  }
+  // Se não houver erro, exibe o conteúdo do arquivo
+  console.log('conteúdo do arquivo:', data);
 });
 
-console.log('Essa mensagem aparece primeiro.');// Mensagem que aparece antes da leitura do arquivo, demonstrando a natureza assíncrona da operação
+// Mensagem exibida antes da leitura do arquivo ser concluída
+console.log('Operação de leitura de arquivo iniciada.');

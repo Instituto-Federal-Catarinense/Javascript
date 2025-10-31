@@ -1,9 +1,12 @@
-const express = require ('express');
-const router = express.Router();
+const express = require('express');
 const clientesController = require('../controllers/clientesController');
+const router = express.Router();
 
-router.get('/', clientesController.clientes);
-router.get('/login', clientesController.login);
-router.post('/autenticar', clientesController.autenticar);
+// GET /clientes
+router.get('/', clientesController.Clientes );
+// GET /clientes/login
+router.get('/login', clientesController.login );
+// POST /clientes/login
+router.post('/login', clientesController.verificado );
 
 module.exports = router;
