@@ -7,6 +7,6 @@ module.exports = {
     } else {
       acesso="negado";
     }
-    return'Olá, ${login}! Seu acesso foi ${acesso}.';
+    return'Olá, ${email}! Seu acesso foi ${acesso}.';
   }
 };
