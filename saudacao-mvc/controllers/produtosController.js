@@ -5,21 +5,24 @@ module.exports = {
   index: (req, res) => {
     res.sendFile("produtos.html", { root: "./views" });
   },
+   camisetas: (req, res) => {
+    res.sendFile("camisetas.html", { root: "./views" });
+  },
 
   formulario: (req, res) => {
-    res.sendFile("formProduto.html", { root: "./views" });
+     res.sendFile("formCadastrar.html", { root: "./views" });
   },
 
   cadastrar: (req, res) => {
     const { id, descricao, quantidade, valor_unitario } = req.body;
 
-    const mensagem = produtosModel.gerarMensagemProdutos(
+    const mensagemCadastro = produtosModel.cadastrar(
       id,
       descricao,
       quantidade,
       valor_unitario
     );
 
-    res.send(`<h1>${mensagem}</h1>`);
+     res.send(`<h1>${mensagemCadastro}</h1>`);
   },
 };
