@@ -1,0 +1,11 @@
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const app = express();
+app.use(helmet()); app.use(cors()); app.use(express.json());
+app.use((req, res, next) => { req.inicio = Date.now(); next(); });
+app.get('/', (req, res) => res.json({ mensagem: 'API funcionando' }));
+app.get('/tempo', (req, res) => res.json({ milissegundos: Date.now() - req.inicio }));
+app.use((erro, req, res, next) => { console.error(erro); res.status(500).json({ erro: 'Erro interno' }); });
+if (require.main === module) app.listen(3000, () => console.log('Servidor em http://localhost:3000'));
+module.exports = app;

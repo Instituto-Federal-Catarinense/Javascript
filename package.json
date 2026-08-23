@@ -1,0 +1,21 @@
+{
+  "name": "javascript-educacional",
+  "version": "1.0.0",
+  "description": "Material completo de ensino-aprendizagem de JavaScript (frontend e backend)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Instituto Federal Catarinense",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "jest": "^29.0.0",
+    "nodemon": "^3.0.0"
+  }
+}

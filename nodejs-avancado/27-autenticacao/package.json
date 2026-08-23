@@ -1,0 +1,1 @@
+{"name":"exemplo-autenticacao","private":true,"scripts":{"start":"node app.js"},"dependencies":{"bcryptjs":"^2.4.3","express":"^4.21.2","jsonwebtoken":"^9.0.2"}}

@@ -1,0 +1,2 @@
+const jwt = require('jsonwebtoken');
+module.exports = (req, res, next) => { const cabecalho = req.headers.authorization || ''; const token = cabecalho.startsWith('Bearer ') ? cabecalho.slice(7) : null; if (!token) return res.sendStatus(401); try { req.usuario = jwt.verify(token, process.env.JWT_SEGREDO || 'desenvolvimento'); return next(); } catch (erro) { return res.sendStatus(401); } };
