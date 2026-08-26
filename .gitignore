@@ -1,1 +1,17 @@
+# Dependências
+node_modules/
+
+# Segredos e ambiente (nunca commitar)
 token.js
+.env
+.env.local
+.env.*.local
+
+# Logs, cache e cobertura de testes
+npm-debug.log*
+coverage/
+.eslintcache
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

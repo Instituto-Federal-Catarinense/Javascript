@@ -1,13 +1,15 @@
 {
   "name": "javascript-educacional",
-  "version": "1.0.0",
-  "description": "Material completo de ensino-aprendizagem de JavaScript (frontend e backend)",
+  "version": "2.0.0",
+  "description": "Trilha completa de ensino-aprendizagem de JavaScript (frontend e backend): playground comentado, exercícios por aula e projetos colaborativos com Git/GitHub",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "/legado/", "/projetos-equipe/"]
   },
   "author": "Instituto Federal Catarinense",
   "license": "MIT",

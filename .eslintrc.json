@@ -1,19 +1,35 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "node": true,
     "es2022": true
   },
-  "extends": ["eslint:recommended", "airbnb-base"],
+  "extends": ["eslint:recommended"],
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
   "rules": {
     "indent": ["error", 2],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
     "semi": ["error", "always"],
-    "no-unused-vars": "warn",
-    "no-console": "off"
-  }
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "no-trailing-spaces": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js", "**/tests/**/*.js"],
+      "env": { "jest": true }
+    },
+    {
+      "files": ["legado/**/*.js"],
+      "rules": {
+        "indent": "off",
+        "quotes": "off",
+        "semi": "off"
+      }
+    }
+  ]
 }
