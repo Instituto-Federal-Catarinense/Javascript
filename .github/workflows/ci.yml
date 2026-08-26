@@ -1,0 +1,60 @@
+# =====================================================================
+# Workflow de Integracao Continua (CI) - versao didatica, comentada
+# Este arquivo roda automaticamente a cada push e a cada Pull Request.
+# Ele aparece na aba "Actions" do repositorio.
+# =====================================================================
+
+# Nome do workflow: e o titulo exibido na lista de runs da aba Actions.
+name: CI
+
+# A chave "on" define os GATILHOS: em que momentos este workflow executa.
+on:
+  # Primeiro gatilho: pushes enviados ao repositorio.
+  push:
+    # Restringe aos pushes feitos na branch 'main'
+    # (pushes diretos na main devem estar bloqueados; o CI serve de rede de seguranca).
+    branches: [main]
+
+  # Segundo gatilho: todo Pull Request aberto contra a 'main'.
+  pull_request:
+    branches: [main]
+    # Com isso, cada PR ganha um "check" verde/vermelho antes do merge.
+
+# Lista de JOBS (trabalhos). Por padrao, jobs rodam em paralelo entre si;
+# aqui temos apenas um, chamado "build".
+jobs:
+  build:
+    # Maquina virtual onde os passos serao executados.
+    # ubuntu-latest = Ubuntu mais recente mantido pelo GitHub Actions.
+    runs-on: ubuntu-latest
+
+    # Os STEPS rodam EM SEQUENCIA dentro da mesma maquina virtual.
+    steps:
+      # PASSO 1: baixa o codigo do repositorio para a maquina virtual.
+      # Sem isso, os proximos passos nao teriam arquivos para trabalhar.
+      # "uses" reaproveita uma action pronta da comunidade (@v4 = versao 4).
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      # PASSO 2: instala o Node.js na versao usada pelo projeto.
+      # "with" passa parametros (inputs) para a action.
+      - name: Configurar Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20   # versao LTS adotada pelo projeto
+          cache: npm         # guarda o cache do npm (~/.npm) para acelerar as instalacoes seguintes
+
+      # PASSO 3: instala as dependencias declaradas no package.json.
+      # "run" executa um comando no shell da maquina virtual.
+      - name: Instalar dependencias
+        run: npm install
+
+      # PASSO 4: roda o linter. Se houver problema de estilo/qualidade,
+      # o comando termina com erro e o workflow fica VERMELHO.
+      - name: Rodar lint
+        run: npm run lint
+
+      # PASSO 5: roda os testes. Qualquer teste falho tambem deixa o CI vermelho,
+      # e um PR com CI vermelho nao pode ser mesclado na 'main'.
+      - name: Rodar testes
+        run: npm test
