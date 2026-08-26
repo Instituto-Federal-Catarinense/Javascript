@@ -1,0 +1,12 @@
+<!-- Partial de cabeçalho (exercício 2): barra de navegação única para todas as páginas. -->
+<header>
+  <nav>
+    <a href="/">Início</a>
+    <a href="/sobre">Sobre</a>
+    <% if (usuario) { %>
+      <span>Olá, <%= usuario.nome %> | <a href="/sair">Sair</a></span>
+    <% } else { %>
+      <a href="/entrar">Entrar</a>
+    <% } %>
+  </nav>
+</header>

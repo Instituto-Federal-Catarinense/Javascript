@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Solução Formulários</title>
+</head>
+<body>
+  <main>
+    <h1>Cadastro de livros</h1>
+    <form id="cadastro" novalidate>
+      <p>
+        <label for="titulo">Título</label>
+        <input id="titulo" required minlength="2">
+      </p>
+      <p>
+        <label for="ano">Ano de edição</label>
+        <input id="ano" type="number" required min="1500">
+      </p>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="saida"></p>
+  </main>
+  <script src="validacao.js"></script>
+</body>
+</html>
