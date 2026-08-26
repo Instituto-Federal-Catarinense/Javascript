@@ -1,0 +1,25 @@
+{
+  "name": "projeto-02-api-tarefas",
+  "version": "1.0.0",
+  "description": "API REST de tarefas para simular desenvolvimento profissional em equipe",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --runInBand"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "educacional"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.0"
+  }
+}

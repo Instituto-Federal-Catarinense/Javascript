@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport garante bom funcionamento em telas pequenas (celular) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Lista de Tarefas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!--
+    Cabeçalho: título do app + botão de tema.
+    O botão #btn-tema ainda não faz nada: quem implementar a issue 9
+    vai alternar o atributo data-tema="escuro" na tag <html>.
+  -->
+  <header class="cabecalho">
+    <h1>Minha Lista de Tarefas</h1>
+    <button type="button" id="btn-tema" class="btn-tema">Alternar tema</button>
+  </header>
+
+  <main class="container">
+
+    <!--
+      Formulário de criação: input + botão.
+      O JS escuta o evento "submit" deste form (#form-tarefa).
+    -->
+    <form id="form-tarefa" autocomplete="off">
+      <label class="rotulo" for="input-tarefa">Nova tarefa</label>
+      <div class="linha-form">
+        <input
+          type="text"
+          id="input-tarefa"
+          name="tarefa"
+          placeholder="O que precisa ser feito?"
+          maxlength="80"
+          required>
+        <button type="submit">Adicionar</button>
+      </div>
+    </form>
+
+    <!--
+      Filtros: três botões com o atributo data-filtro.
+      A issue 7 deve ler esse atributo para saber qual filtro ativar.
+    -->
+    <div class="filtros" role="group" aria-label="Filtrar tarefas">
+      <button type="button" data-filtro="todas" class="ativo">Todas</button>
+      <button type="button" data-filtro="ativas">Ativas</button>
+      <button type="button" data-filtro="concluidas">Concluídas</button>
+    </div>
+
+    <!--
+      Lista dinâmica: os <li> são criados pelo JavaScript
+      dentro desta ul vazia (#lista-tarefas).
+    -->
+    <section aria-label="Lista de tarefas">
+      <ul id="lista-tarefas"></ul>
+      <!-- Mensagem exibida quando não há tarefas visíveis -->
+      <p id="sem-tarefas" class="sem-tarefas">Nenhuma tarefa por aqui. Adicione a primeira!</p>
+    </section>
+
+    <!--
+      Rodapé: contador de pendentes (issue 8 escreve em #contador)
+      e botão "limpar concluídas" (issue 11).
+    -->
+    <footer class="rodape">
+      <span id="contador">Nenhuma tarefa pendente</span>
+      <button type="button" id="btn-limpar-concluidas">Limpar concluídas</button>
+    </footer>
+
+  </main>
+
+  <!-- Script no fim do body: o HTML já existe quando o JS roda -->
+  <script src="js/app.js"></script>
+</body>
+</html>

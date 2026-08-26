@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Lista de Tarefas — folha de estilos
+   Ordem: variáveis -> base -> cabeçalho -> formulário -> filtros ->
+          lista -> rodapé -> tema escuro -> responsivo
+   ========================================================================== */
+
+/* Variáveis de cor: mudar só aqui altera o app inteiro */
+:root {
+  --cor-fundo: #f4f5f7;
+  --cor-cartao: #ffffff;
+  --cor-texto: #22272e;
+  --cor-suave: #6a737d;
+  --cor-principal: #2563eb;
+  --cor-borda: #d8dee4;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Reset básico: remove margens padrão e unifica a fonte */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* Cartão central que abriga todo o app */
+.container {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 20px;
+  background-color: var(--cor-cartao);
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+.cabecalho {
+  max-width: 520px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botão de tema claro/escuro (implementado na issue 9) */
+.btn-tema {
+  padding: 6px 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  background: var(--cor-cartao);
+  cursor: pointer;
+}
+
+/* Formulário: label em cima, input e botão lado a lado */
+.linha-form { display: flex; gap: 8px; margin-top: 4px; }
+
+#input-tarefa {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type='submit'] {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--cor-principal);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Filtros em pílulas; a classe .ativo marca o selecionado (issue 7) */
+.filtros { display: flex; gap: 8px; margin: 16px 0; }
+
+.filtros button {
+  padding: 6px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filtros button.ativo {
+  background-color: var(--cor-principal);
+  border-color: var(--cor-principal);
+  color: #fff;
+}
+
+/* Itens da lista: checkbox, texto e botão remover lado a lado */
+#lista-tarefas li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.titulo-tarefa { flex: 1; word-break: break-word; }
+
+/* Tarefa concluída: texto riscado e apagado */
+li.concluida .titulo-tarefa { text-decoration: line-through; color: var(--cor-suave); }
+
+.btn-remover { border: none; background: transparent; color: #c0392b; cursor: pointer; }
+
+.sem-tarefas,
+.rodape { color: var(--cor-suave); }
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+
+/* Tema escuro: ativado pela issue 9 via <html data-tema="escuro"> */
+html[data-tema='escuro'] {
+  --cor-fundo: #14181f;
+  --cor-cartao: #1e242d;
+  --cor-texto: #e6edf3;
+  --cor-suave: #9aa4b2;
+  --cor-borda: #333c48;
+  --cor-principal: #3b82f6;
+}
+
+/* Responsivo simples: em telas estreitas o cabeçalho empilha */
+@media (max-width: 480px) {
+  .cabecalho { flex-direction: column; gap: 8px; text-align: center; }
+}
