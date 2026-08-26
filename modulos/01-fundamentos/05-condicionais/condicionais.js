@@ -8,10 +8,11 @@ function avaliarNota(nota) {
 const dia = 2;
 let nomeDia;
 switch (dia) {
-  case 1: nomeDia = 'domingo'; break;
-  case 2: nomeDia = 'segunda-feira'; break;
-  default: nomeDia = 'outro dia';
+case 1: nomeDia = 'domingo'; break;
+case 2: nomeDia = 'segunda-feira'; break;
+default: nomeDia = 'outro dia';
 }
 
-console.log(avaliarNota(8), nomeDia, 18 >= 18 ? 'maior de idade' : 'menor de idade');
+const idadeEstudante = 18;
+console.log(avaliarNota(8), nomeDia, idadeEstudante >= 18 ? 'maior de idade' : 'menor de idade');
 module.exports = { avaliarNota };

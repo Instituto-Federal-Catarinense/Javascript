@@ -19,7 +19,7 @@ Existem três tipos principais de módulos:
 Vamos criar um módulo personalizado para entender como eles funcionam.
 
 **Passo 1:** Criando o Módulo
-Crie um arquivo chamado meuModulo.js e adicione o seguinte código:
+Crie um arquivo chamado `meu-modulo.js` e adicione o seguinte código:
 
 **Passo 2:** Usando o Módulo
 Agora crie outro arquivo chamado app.js e importe o módulo que acabamos de criar:
