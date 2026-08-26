@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MINI-APP — DOM: selecionar, alterar e manipular elementos
+  ------------------------------------------------------------
+  Como testar: abra este index.html no navegador (duplo clique ou
+  arraste para uma aba). Abra o Console com F12 para ver os logs.
+  Clique nos botões e observe o HTML mudando no Inspetor (F12).
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground — DOM</title>
+  <style>
+    /* Estilo mínimo apenas para o playground ficar legível */
+    body { font-family: Arial, sans-serif; margin: 24px; background: #fafafa; color: #222; }
+    button { margin: 4px; padding: 6px 12px; cursor: pointer; }
+    .destaque { background: #ffe066; padding: 8px; border-radius: 6px; }
+    li { padding: 4px 0; }
+    hr { margin: 20px 0; border: none; border-top: 1px solid #ddd; }
+  </style>
+  <!-- defer garante que o JS rode só DEPOIS de todo o HTML existir na página -->
+  <script src="dom.js" defer></script>
+</head>
+<body>
+
+  <h1 id="titulo">Playground: DOM</h1>
+
+  <p id="paragrafo">Este texto será alterado pelo JavaScript.</p>
+  <button id="btn-texto">Alterar texto</button>
+  <button id="btn-destacar">Alternar destaque amarelo</button>
+
+  <hr>
+
+  <!-- Este link terá seus ATRIBUTOS trocados pelo JS -->
+  <p><a id="link" href="https://developer.mozilla.org/pt-BR/" target="_blank">Documentação MDN</a></p>
+  <button id="btn-link">Trocar destino do link</button>
+
+  <hr>
+
+  <h2>Lista de tarefas</h2>
+  <input id="campo-item" type="text" placeholder="Digite um item...">
+  <button id="btn-adicionar">Adicionar</button>
+  <button id="btn-remover-primeiro">Remover primeiro</button>
+  <button id="btn-remover-ultimo">Remover último</button>
+
+  <!-- Lista vazia: os itens serão CRIADOS via JavaScript -->
+  <ul id="lista"></ul>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MINI-APP — Web Storage (localStorage)
+  ------------------------------------------------------------
+  Como testar: abra este index.html no navegador. O contador de
+  visitas cresce a cada recarregamento da página (F5). Escolha o
+  tema, digite seu nome e salve; feche o navegador e volte: as
+  preferências continuam lá! Use "Limpar dados" para apagar tudo.
+  Inspecione em F12 > Application > Local Storage.
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground — Web Storage</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #ffffff; color: #222;
+           transition: background 0.3s, color 0.3s; }
+    /* A classe .escuro no body muda TODO o visual de uma vez */
+    body.escuro { background: #1c1c24; color: #f1f1f1; }
+    body.escuro input { background: #33333d; color: #f1f1f1; border-color: #555; }
+    button { padding: 6px 14px; cursor: pointer; margin: 4px 4px 4px 0; }
+    input { padding: 8px; }
+    hr { margin: 20px 0; border: none; border-top: 1px solid currentColor; opacity: 0.3; }
+  </style>
+  <!-- defer: o JS roda após o HTML, já podendo aplicar o tema salvo -->
+  <script src="storage.js" defer></script>
+</head>
+<body>
+
+  <h1>Playground: localStorage</h1>
+
+  <!-- Contador persistente de visitas -->
+  <p id="contador-visitas">Carregando...</p>
+
+  <hr>
+
+  <!-- Preferência de tema persistida -->
+  <h2>Tema</h2>
+  <button id="btn-tema">Alternar tema claro/escuro</button>
+
+  <hr>
+
+  <!-- Perfil do usuário salvo como OBJETO JSON -->
+  <h2>Perfil</h2>
+  <label for="campo-nome">Seu nome:</label>
+  <input id="campo-nome" type="text" placeholder="Ex.: Ana">
+  <button id="btn-salvar">Salvar perfil</button>
+  <p id="saudacao"></p>
+
+  <hr>
+
+  <!-- removeItem: apaga tudo que este app guardou -->
+  <button id="btn-limpar">Limpar dados salvos</button>
+
+</body>
+</html>

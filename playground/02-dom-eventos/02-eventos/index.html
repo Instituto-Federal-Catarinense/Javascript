@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MINI-APP — Eventos: click, input, mouseover e delegação
+  ------------------------------------------------------------
+  Como testar: abra este index.html no navegador e use F12 (Console).
+  Clique no botão, digite no campo, passe o mouse na área vermelha
+  e clique nos itens da lista (inclusive nos que você criar).
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground — Eventos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #fafafa; color: #222; }
+    button { margin: 4px; padding: 6px 12px; cursor: pointer; }
+    #area-hover { width: 260px; padding: 16px; background: #ffd7d7; border-radius: 8px;
+                  transition: background 0.2s; user-select: none; }
+    li { cursor: pointer; padding: 4px 0; }
+    li:hover { text-decoration: underline; }
+    hr { margin: 20px 0; border: none; border-top: 1px solid #ddd; }
+  </style>
+  <!-- defer: o JS só executa quando a árvore HTML já estiver completa -->
+  <script src="eventos.js" defer></script>
+</head>
+<body>
+
+  <h1>Playground: Eventos</h1>
+
+  <!-- 1) EVENTO CLICK: contador de cliques -->
+  <button id="btn-clique">Clique em mim!</button>
+  <p id="saida-click">Nenhum clique ainda.</p>
+
+  <hr>
+
+  <!-- 2) EVENTO INPUT: reage a CADA tecla digitada -->
+  <label for="campo-live">Digite algo:</label>
+  <input id="campo-live" type="text" placeholder="Texto ao vivo...">
+  <p id="saida-live">O espelho aparecerá aqui.</p>
+
+  <hr>
+
+  <!-- 3) MOUSEOVER / MOUSEOUT: entrada e saída do ponteiro -->
+  <div id="area-hover">Passe o mouse por aqui</div>
+
+  <hr>
+
+  <!-- 4) DELEGAÇÃO: um único ouvinte na <ul> serve para TODOS os <li>,
+       inclusive os criados depois! -->
+  <h2>Lista com delegação de eventos</h2>
+  <input id="campo-item" type="text" placeholder="Novo item...">
+  <button id="btn-adicionar">Adicionar item</button>
+
+  <ul id="lista-delegada">
+    <li>Milho</li>
+    <li>Feijão</li>
+    <li>Arroz</li>
+  </ul>
+
+</body>
+</html>

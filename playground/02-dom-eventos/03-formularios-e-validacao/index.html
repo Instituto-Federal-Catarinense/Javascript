@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MINI-APP — Formulários e Validação
+  ------------------------------------------------------------
+  Como testar: abra este index.html no navegador e tente enviar
+  o formulário com dados inválidos (nome curto, email sem @,
+  idade fora da faixa). Veja as mensagens de erro sob cada campo.
+  Com dados válidos, a mensagem de sucesso aparece no topo.
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground — Formulários</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #fafafa; color: #222; }
+    form { max-width: 380px; }
+    .campo { margin-bottom: 14px; }
+    label { display: block; font-weight: bold; margin-bottom: 4px; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; }
+    input.invalido { border: 2px solid #d33; }
+    .erro { display: block; min-height: 18px; color: #d33; font-size: 0.85em; }
+    #sucesso { color: #1a7f37; font-weight: bold; min-height: 22px; }
+    button { padding: 8px 16px; cursor: pointer; }
+  </style>
+  <!-- defer: garante que os campos já existam quando o JS procurar por eles -->
+  <script src="validacao.js" defer></script>
+</head>
+<body>
+
+  <h1>Cadastro de estudante</h1>
+
+  <!-- Mensagem de sucesso (aria-live anuncia para leitores de tela) -->
+  <p id="sucesso" aria-live="polite"></p>
+
+  <!-- novalidate desliga a validação nativa do navegador:
+       assim QUEM valida somos nós, com mensagens em português -->
+  <form id="form-cadastro" novalidate>
+
+    <div class="campo">
+      <!-- for do label = id do input: clicar no texto foca o campo (acessibilidade) -->
+      <label for="campo-nome">Nome completo</label>
+      <input id="campo-nome" name="nome" type="text"
+             aria-describedby="erro-nome" placeholder="Ex.: Ana Silva">
+      <!-- role="alert": quando ganhar texto, leitores de tela anunciam na hora -->
+      <span id="erro-nome" class="erro" role="alert"></span>
+    </div>
+
+    <div class="campo">
+      <label for="campo-email">E-mail</label>
+      <input id="campo-email" name="email" type="email"
+             aria-describedby="erro-email" placeholder="exemplo@email.com">
+      <span id="erro-email" class="erro" role="alert"></span>
+    </div>
+
+    <div class="campo">
+      <label for="campo-idade">Idade (14 a 120)</label>
+      <input id="campo-idade" name="idade" type="number"
+             aria-describedby="erro-idade" placeholder="Ex.: 17">
+      <span id="erro-idade" class="erro" role="alert"></span>
+    </div>
+
+    <button type="submit">Enviar cadastro</button>
+
+  </form>
+
+</body>
+</html>
